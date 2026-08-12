@@ -1,0 +1,19 @@
+package com.willadev.dependency_injection.services;
+
+import com.willadev.dependency_injection.entities.Order;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ShippingService {
+
+    public double shipment(Order order) {
+
+        if (order.getBasic() < 100.00) {
+            return 20.00;
+        } else if (order.getBasic() >= 100.0 && order.getBasic() <= 200.00) {
+            return 12.00;
+        }
+
+        return 0.0;
+    }
+}
