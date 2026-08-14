@@ -19,7 +19,7 @@ public class DependencyInjectionApplication implements CommandLineRunner {
 	@Autowired
 	private OrderService orderService;
 
-	static void main(String[] args) {
+	public static void main(String[] args) {
 
 		SpringApplication.run(DependencyInjectionApplication.class, args);
 	}
